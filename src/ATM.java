@@ -19,23 +19,29 @@ public class ATM {
         boolean keepRunning = true;
 
         while (keepRunning) {
-            System.out.println("Would you like to check your balance, withdrawl, or cancel?");
+            System.out.println("Would you like to check your balance, withdrawl, deposit, or cancel?");
             String choice = scanner.nextLine();
 
             if (choice.equalsIgnoreCase("balance")) {
                 System.out.println("Your balance is " + balance);
-            } else if (choice.equalsIgnoreCase("cancel")) {
+            }
+            else if (choice.equalsIgnoreCase("cancel")) {
                 System.out.println("Thank you. Please come again.");
                 throw new Exception();
-            } else if (choice.equalsIgnoreCase("withdrawl")) {
+            }
+            else if (choice.equalsIgnoreCase("withdrawl")) {
                 System.out.println("How much would you like to withdraw?");
                 String withdrawl = scanner.nextLine();
                 int withdrawlNum = Integer.valueOf(withdrawl);
                 balance = balance - withdrawlNum;
-
-
             }
 
+            else if (choice.equalsIgnoreCase("deposit")) {
+                System.out.println("How much would you like to deposit?");
+                String deposit = scanner.nextLine();
+                int depositNum =  Integer.valueOf(deposit);
+                balance = balance + depositNum;
+            }
 
         }
     }
