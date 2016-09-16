@@ -16,11 +16,13 @@ public class ATM {
         String name = scanner.nextLine();
         System.out.println("Welcome, " + name);
 
+
         boolean keepRunning = true;
 
         while (keepRunning) {
-            System.out.println("Would you like to check your balance, withdrawl, deposit, or cancel?");
+            System.out.println("Would you like to check your balance, withdrawal, deposit, or cancel?");
             String choice = scanner.nextLine();
+
 
             if (choice.equalsIgnoreCase("balance")) {
                 System.out.println("Your balance is " + balance);
@@ -29,11 +31,11 @@ public class ATM {
                 System.out.println("Thank you. Please come again.");
                 throw new Exception();
             }
-            else if (choice.equalsIgnoreCase("withdrawl")) {
+            else if (choice.equalsIgnoreCase("withdrawal")) {
                 System.out.println("How much would you like to withdraw?");
-                String withdrawl = scanner.nextLine();
-                int withdrawlNum = Integer.valueOf(withdrawl);
-                balance = balance - withdrawlNum;
+                String withdrawal = scanner.nextLine();
+                int withdrawalNum = Integer.valueOf(withdrawal);
+                balance = balance - withdrawalNum;
             }
 
             else if (choice.equalsIgnoreCase("deposit")) {
