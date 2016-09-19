@@ -15,10 +15,9 @@ public class ATM {
 
 
 
-        System.out.println("Welcome to Heritage Trust");
+        System.out.println("Welcome to ");
         System.out.println("please enter your name.");
 
-        int balance = 100;
 
 
         Scanner scanner = new Scanner(System.in);
